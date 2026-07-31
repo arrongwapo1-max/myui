@@ -1,5 +1,6 @@
 import { Footer } from "@/components/common/footer";
 import { Header } from "@/components/common/header";
+import { Button } from "@/components/ui/button";
 
 export default function ContactPage() {
   return (
@@ -7,200 +8,92 @@ export default function ContactPage() {
       <Header />
 
       <main className="flex-1">
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="max-w-3xl mx-auto">
-            
-            {/* Title */}
-            <div className="text-center mb-10">
-              <h1 className="text-5xl font-bold">
-                Contact Me
-              </h1>
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-start">
+            <div className="space-y-6">
+              <span className="inline-flex rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-600 shadow-sm">
+                Let’s Connect
+              </span>
 
-              <p className="text-muted-foreground mt-4 text-lg">
-                Have a project in mind or want to collaborate? 
-                Feel free to send me a message.
-              </p>
+              <div className="space-y-4">
+                <h1 className="text-4xl font-black tracking-tight text-slate-950 md:text-5xl">
+                  Contact Me
+                </h1>
+                <p className="max-w-xl text-base leading-8 text-slate-600 md:text-lg">
+                  Have a project in mind or want to collaborate? Feel free to send
+                  me a message and I’ll get back to you as soon as possible.
+                </p>
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
+                <div className="rounded-[22px] border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-900 hover:shadow-[0_18px_40px_-22px_rgba(15,23,42,0.55)]">
+                  <h3 className="mb-2 text-lg font-bold text-slate-950">Email</h3>
+                  <p className="text-slate-600">your@email.com</p>
+                </div>
+
+                <div className="rounded-[22px] border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-900 hover:shadow-[0_18px_40px_-22px_rgba(15,23,42,0.55)]">
+                  <h3 className="mb-2 text-lg font-bold text-slate-950">Location</h3>
+                  <p className="text-slate-600">Philippines</p>
+                </div>
+
+                <div className="rounded-[22px] border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-slate-900 hover:shadow-[0_18px_40px_-22px_rgba(15,23,42,0.55)]">
+                  <h3 className="mb-2 text-lg font-bold text-slate-950">Social</h3>
+                  <p className="text-slate-600">GitHub / LinkedIn</p>
+                </div>
+              </div>
             </div>
 
+            <form className="rounded-[30px] border border-slate-200 bg-white p-6 shadow-[0_24px_80px_-40px_rgba(15,23,42,0.55)] sm:p-8 lg:p-10">
+              <div className="grid gap-5">
+                <div>
+                  <label className="mb-2 block text-sm font-semibold text-slate-700">
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Enter your name"
+                    className="w-full rounded-2xl border border-slate-300 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition-all duration-300 focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-200"
+                  />
+                </div>
 
-            {/* Contact Form */}
-            <form className="
-              bg-white
-              border
-              border-gray-200
-              rounded-2xl
-              p-8
-              shadow-sm
-              space-y-6
-              transition-all
-              duration-300
-              hover:shadow-xl
-              hover:border-black
-            ">
-              
-              {/* Name */}
-              <div>
-                <label className="block text-sm font-medium mb-2">
-                  Full Name
-                </label>
+                <div>
+                  <label className="mb-2 block text-sm font-semibold text-slate-700">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="w-full rounded-2xl border border-slate-300 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition-all duration-300 focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-200"
+                  />
+                </div>
 
-                <input
-                  type="text"
-                  placeholder="Enter your name"
-                  className="
-                    w-full
-                    rounded-lg
-                    border
-                    border-gray-300
-                    px-4
-                    py-3
-                    outline-none
-                    transition
-                    focus:border-black
-                    focus:ring-2
-                    focus:ring-gray-200
-                  "
-                />
+                <div>
+                  <label className="mb-2 block text-sm font-semibold text-slate-700">
+                    Subject
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="What is this about?"
+                    className="w-full rounded-2xl border border-slate-300 bg-slate-50 px-4 py-3 text-slate-900 outline-none transition-all duration-300 focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-200"
+                  />
+                </div>
+
+                <div>
+                  <label className="mb-2 block text-sm font-semibold text-slate-700">
+                    Message
+                  </label>
+                  <textarea
+                    rows={5}
+                    placeholder="Write your message here..."
+                    className="w-full rounded-2xl border border-slate-300 bg-slate-50 px-4 py-3 text-slate-900 outline-none resize-none transition-all duration-300 focus:border-slate-900 focus:bg-white focus:ring-2 focus:ring-slate-200"
+                  />
+                </div>
+
+                <div className="pt-2">
+                  <Button className="w-full justify-center px-8 py-3 sm:w-auto">Send Message</Button>
+                </div>
               </div>
-
-
-              {/* Email */}
-              <div>
-                <label className="block text-sm font-medium mb-2">
-                  Email Address
-                </label>
-
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="
-                    w-full
-                    rounded-lg
-                    border
-                    border-gray-300
-                    px-4
-                    py-3
-                    outline-none
-                    transition
-                    focus:border-black
-                    focus:ring-2
-                    focus:ring-gray-200
-                  "
-                />
-              </div>
-
-
-              {/* Subject */}
-              <div>
-                <label className="block text-sm font-medium mb-2">
-                  Subject
-                </label>
-
-                <input
-                  type="text"
-                  placeholder="What is this about?"
-                  className="
-                    w-full
-                    rounded-lg
-                    border
-                    border-gray-300
-                    px-4
-                    py-3
-                    outline-none
-                    transition
-                    focus:border-black
-                    focus:ring-2
-                    focus:ring-gray-200
-                  "
-                />
-              </div>
-
-
-              {/* Message */}
-              <div>
-                <label className="block text-sm font-medium mb-2">
-                  Message
-                </label>
-
-                <textarea
-                  rows={5}
-                  placeholder="Write your message here..."
-                  className="
-                    w-full
-                    rounded-lg
-                    border
-                    border-gray-300
-                    px-4
-                    py-3
-                    outline-none
-                    resize-none
-                    transition
-                    focus:border-black
-                    focus:ring-2
-                    focus:ring-gray-200
-                  "
-                />
-              </div>
-
-
-              {/* Submit Button */}
-              <div className="flex justify-center">
-                <button
-                  type="submit"
-                  className="
-                    px-8
-                    py-3
-                    rounded-lg
-                    bg-black
-                    text-white
-                    font-medium
-                    transition-all
-                    duration-300
-                    hover:bg-gray-800
-                    hover:shadow-lg
-                  "
-                >
-                  Send Message
-                </button>
-              </div>
-
             </form>
-
-
-            {/* Contact Information */}
-            <div className="grid md:grid-cols-3 gap-6 mt-12 text-center">
-
-              <div className="p-6 rounded-xl border hover:border-black transition">
-                <h3 className="font-semibold mb-2">
-                  Email
-                </h3>
-                <p className="text-muted-foreground">
-                  your@email.com
-                </p>
-              </div>
-
-
-              <div className="p-6 rounded-xl border hover:border-black transition">
-                <h3 className="font-semibold mb-2">
-                  Location
-                </h3>
-                <p className="text-muted-foreground">
-                  Philippines
-                </p>
-              </div>
-
-
-              <div className="p-6 rounded-xl border hover:border-black transition">
-                <h3 className="font-semibold mb-2">
-                  Social
-                </h3>
-                <p className="text-muted-foreground">
-                  GitHub / LinkedIn
-                </p>
-              </div>
-
-            </div>
-
           </div>
         </section>
       </main>

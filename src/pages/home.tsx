@@ -10,37 +10,60 @@ export default function HomePage() {
       <Header />
 
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center space-y-6">
-            <h1 className="text-5xl md:text-6xl font-bold">
-              Hi, I'm <span className="text-primary">Arron aspiring dev</span>
-            </h1>
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(15,23,42,0.08),_transparent_40%)]" />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-24">
+            <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+              <div className="space-y-6 text-center lg:text-left">
+                <span className="inline-flex items-center rounded-full border border-gray-300 bg-white/80 px-4 py-2 text-sm font-medium text-gray-700 shadow-sm backdrop-blur">
+                  Frontend Developer in Progress
+                </span>
 
-            <p className="text-xl text-muted-foreground max-w-3x1  mx-auto ">
-              An enthusiastic learner actively building skills in web
-              development, backend architecture, and practical problem-solving.
-              Constantly expanding my technical toolkit and working toward
-              delivering clean, user-focused software.
-            </p>
+                <h1 className="text-5xl md:text-6xl font-black tracking-tight text-gray-950">
+                  Hi, I'm <span className="bg-gradient-to-r from-slate-900 via-slate-700 to-slate-500 bg-clip-text text-transparent">Arron aspiring dev</span>
+                </h1>
 
-            <div className="flex justify-center gap-4 pt-4">
-              <button className="px-6 py-3 rounded-lg bg-primary text-white hover:opacity-90 transition">
-                View Projects
-              </button>
+                <p className="mx-auto max-w-2xl text-lg leading-8 text-gray-600 lg:mx-0">
+                  An enthusiastic learner actively building skills in web
+                  development, frontend architecture, and practical problem-solving.
+                  Constantly expanding my technical toolkit and working toward
+                  delivering clean, user-focused software.
+                </p>
 
-            
+                <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 pt-2">
+                  <Button className="px-6 py-3">View Projects</Button>
+                  <Button variant="secondary" className="px-6 py-3">Get In Touch</Button>
+                </div>
+              </div>
+
+              <div className="rounded-[28px] border border-gray-200 bg-white/80 p-5 shadow-[0_20px_70px_-30px_rgba(15,23,42,0.4)] backdrop-blur-sm">
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="rounded-2xl bg-slate-950 p-5 text-white">
+                    <p className="text-sm text-slate-300">Focus</p>
+                    <p className="mt-2 text-2xl font-bold">Responsive UI</p>
+                  </div>
+                  <div className="rounded-2xl bg-slate-100 p-5">
+                    <p className="text-sm text-slate-500">Current Stack</p>
+                    <p className="mt-2 text-2xl font-bold text-slate-900">React + TS</p>
+                  </div>
+                  <div className="rounded-2xl bg-slate-100 p-5 sm:col-span-2">
+                    <p className="text-sm text-slate-500">What I enjoy</p>
+                    <p className="mt-2 text-lg leading-7 text-slate-700">
+                      Building interfaces that feel smooth, intuitive, and easy to use on any screen size.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* About */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
           <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div>
-              <h2 className="text-3xl font-bold mb-4">About Me</h2>
-
-              <p className="text-muted-foreground leading-8">
+            <div className="space-y-4">
+              <span className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">About Me</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-950">A thoughtful builder with a clean design mindset</h2>
+              <p className="text-base md:text-lg leading-8 text-slate-600">
                 I enjoy building clean and scalable web applications that solve
                 real-world problems. My focus is on creating intuitive user
                 experiences with modern technologies while continuously learning
@@ -48,40 +71,24 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="bg-muted rounded-2xl h-80 flex items-center justify-center">
-              <span className="text-muted-foreground">
-              
-                <div className="flex justify-center">
-                  <img
-                    src={profile}
-                    alt="Arron profile"
-                    className="
-                        h-[400px]
-                        w-[600px]
-                        rounded-2xl
-                        object-cover
-                        border 
-                        border-gray-200
-                        shadow-lg
-                        transition-all
-                        duration-300
-                        hover:border-grey-500
-                        hover:shadow-2xl grey
-                        hover:scale-105
-                       "
-                  />
-                </div>
-              </span>
+            <div className="rounded-[28px] border border-slate-200 bg-slate-50 p-3 shadow-sm">
+              <img
+                src={profile}
+                alt="Arron profile"
+                className="h-[420px] w-full rounded-[20px] object-cover object-center shadow-lg transition-all duration-500 hover:scale-[1.02]"
+              />
             </div>
           </div>
         </section>
 
-        {/* Featured Projects */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="mb-8">
-            <h2 className="text-3xl font-bold">Featured Projects</h2>
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <div className="mb-8 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+            <div>
+              <span className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Featured Projects</span>
+              <h2 className="mt-2 text-3xl md:text-4xl font-bold text-slate-950">Recent work worth sharing</h2>
+            </div>
 
-            <p className="text-muted-foreground mt-2">
+            <p className="text-slate-600">
               Some of my recent work.
             </p>
           </div>
@@ -95,8 +102,8 @@ export default function HomePage() {
             />
 
             <Card
-              title="E-Commerce App"
-              description="Full-stack shopping platform with authentication and payments."
+              title="HTML & CSS Showcase"
+              description="A clean, responsive landing page built with semantic HTML and polished CSS styling."
               buttonLabel="View Project"
               buttonVariant="primary"
             />
@@ -110,48 +117,43 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Skills */}
-         {/* Skills */}
-<section className="bg-muted/40 py-16">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="bg-slate-50/70 py-16 md:py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <span className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Skills</span>
+              <h2 className="mt-2 text-3xl md:text-4xl font-bold text-slate-950">Tools I’m actively growing with</h2>
+            </div>
 
-    <h2 className="text-3xl font-bold text-center mb-10">
-      Skills
-    </h2>
+            <div className="flex flex-wrap justify-center gap-3">
+              {[
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "TypeScript",
+                "React",
+                "Next.js",
+                "Tailwind CSS",
+              ].map((skill) => (
+                <Button key={skill} variant="tertiary">
+                  {skill}
+                </Button>
+              ))}
+            </div>
+          </div>
+        </section>
 
-    <div className="flex flex-wrap justify-center gap-4">
-      {[
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "TypeScript",
-        "React",
-        "Next.js",
-        "Tailwind CSS",
-      ].map((skill) => (
-        <Button
-          key={skill}
-          variant="tertiary"
-        >
-          {skill}
-        </Button>
-      ))}
-    </div>
-
-  </div>
-</section>
-        {/* Contact CTA */}
         <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-          <h2 className="text-4xl font-bold">Let's Build Something Amazing</h2>
+          <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-[0_20px_80px_-40px_rgba(15,23,42,0.45)] sm:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-950">Let's Build Something Amazing</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-base md:text-lg text-slate-600">
+              I'm currently open to internships, freelance work, and full-time
+              opportunities.
+            </p>
 
-          <p className="text-muted-foreground mt-4">
-            I'm currently open to internships, freelance work, and full-time
-            opportunities.
-          </p>
-
-          <button className="mt-8 px-8 py-3 rounded-lg bg-primary text-white hover:opacity-90 transition">
-            Get In Touch
-          </button>
+            <div className="mt-8 flex justify-center">
+              <Button className="px-8 py-3">Get In Touch</Button>
+            </div>
+          </div>
         </section>
       </main>
 

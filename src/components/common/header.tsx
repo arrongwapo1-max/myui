@@ -3,24 +3,24 @@ import { Button } from "@/components/ui/button";
 
 export function Header() {
   return (
-    <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/85 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo / Brand */}
           <div className="flex-shrink-0">
-            <NavLink to="/" className="text-xl font-bold text-gray-900">
+            <NavLink to="/" className="text-xl font-black tracking-tight text-slate-950">
               Myportfolio
             </NavLink>
           </div>
 
-          {/* Navigation Links */}
-          <nav className="flex items-center space-x-6 sm:space-x-8">
-            <NavLink to="/" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Home</NavLink>
-            <NavLink to="/about" className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">About</NavLink>
-            
-            {/* Contact Button */}
+          <nav className="flex items-center gap-3 sm:gap-6">
+            <NavLink to="/" className="text-sm font-medium text-slate-600 transition-colors hover:text-slate-950">
+              Home
+            </NavLink>
+            <NavLink to="/about" className="text-sm font-medium text-slate-600 transition-colors hover:text-slate-950">
+              About
+            </NavLink>
             <NavLink to="/contact">
-              <Button>Contact</Button>
+              <Button className="px-4 py-2">Contact</Button>
             </NavLink>
           </nav>
         </div>
